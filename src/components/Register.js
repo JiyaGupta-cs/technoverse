@@ -31,18 +31,19 @@ const Register = () => {
           <input class="r-input" type="text" placeholder="Year" />
           <input class="r-input" type="text" placeholder="Phone Number" />
           <input class="r-input" type="text" placeholder="E-Mail I.D." />
-          <div className="r-input">College name ?</div>
+          <div className="r-input">College</div>
+<div className="flex gap-8">
+          <label className="flex gap-5">
 
-          <label>
             <input
-              className="r-input"
+              className="r-input bg-red-50"
               type="radio"
               name="options"
               onChange={() => setselect(false)}
             />
             KIET
           </label>
-          <label>
+          <label className="flex gap-5">
             {" "}
             <input
               className="r-input"
@@ -52,11 +53,13 @@ const Register = () => {
             />
             Other
           </label>
-
+          </div>
           {select && (
-            <div className="flex flex-col ">
-              <input type="text" placeholder="Enter college name" />
-              <input type="text" placeholder="Enter your house no " />
+            <div className="flex flex-col justify-center items-center gap-8 ">
+              <div className="flex-col text-center   lg:text-sm lg:flex-ro ">
+              <input className="p-[0.3rem] rounded m-2 lg:mx-2" type="text" placeholder="Enter college name" />
+              <input  className="p-[0.3rem] rounded m-2 lg:mx-2" type="text" placeholder="Enter your house no " />
+              </div>
               <img src="" alt="payment qr logo " />
             </div>
           )}

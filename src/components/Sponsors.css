@@ -82,6 +82,8 @@
     font-size: 4em;
     margin-bottom: 30px;
     padding: 0px 15px;
+    
+    text-align: center;
 }
   @media screen and (max-width: 600px) {
     .sponsor-heading{
