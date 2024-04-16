@@ -31,7 +31,8 @@ const Register = () => {
           <input class="r-input" type="text" placeholder="Year" />
           <input class="r-input" type="text" placeholder="Phone Number" />
           <input class="r-input" type="text" placeholder="E-Mail I.D." />
-          <div className="r-input">College</div>
+          <div className="r-input flex flex-col gap-5" style={{borderBottom:'none'}}>
+           <p> College</p>
 <div className="flex gap-8">
           <label className="flex gap-5">
 
@@ -53,7 +54,7 @@ const Register = () => {
               onChange={() => setselect(true)}
             />
             Other
-          </label>
+          </label></div>
           </div>
           {!select && (
             <div className="flex flex-col justify-center items-center gap-8 ">
