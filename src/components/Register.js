@@ -31,14 +31,16 @@ const Register = () => {
           <input class="r-input" type="text" placeholder="Year" />
           <input class="r-input" type="text" placeholder="Phone Number" />
           <input class="r-input" type="text" placeholder="E-Mail I.D." />
-          <div className="r-input">College</div>
+          <div className="r-input flex flex-col gap-5" style={{borderBottom:'none'}}>
+           <p> College</p>
 <div className="flex gap-8">
           <label className="flex gap-5">
 
             <input
-              className="r-input bg-red-50"
+              className="r-input"
               type="radio"
               name="options"
+              checked={!select}
               onChange={() => setselect(false)}
             />
             KIET
@@ -52,13 +54,20 @@ const Register = () => {
               onChange={() => setselect(true)}
             />
             Other
-          </label>
+          </label></div>
           </div>
+          {!select && (
+            <div className="flex flex-col justify-center items-center gap-8 ">
+              <div className="flex-col text-center   lg:text-sm lg:flex-ro ">
+              <input className="p-[0.5rem] text-center px-8 rounded m-2 lg:mx-2" type="email" placeholder="Enter KIET Email ID" />
+              </div>
+            </div>
+          )}
           {select && (
             <div className="flex flex-col justify-center items-center gap-8 ">
               <div className="flex-col text-center   lg:text-sm lg:flex-ro ">
-              <input className="p-[0.3rem] rounded m-2 lg:mx-2" type="text" placeholder="Enter college name" />
-              <input  className="p-[0.3rem] rounded m-2 lg:mx-2" type="text" placeholder="Enter your house no " />
+              <input className="p-[0.5rem] text-center px-8  rounded m-2 lg:mx-2" type="text" placeholder="Enter college name" />
+              {/* <input  className="p-[0.3rem] rounded m-2 lg:mx-2" type="text" placeholder="Enter your house no " /> */}
               </div>
               <img src="" alt="payment qr logo " />
             </div>
